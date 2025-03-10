@@ -11,7 +11,7 @@ main{
 
 header{
     margin: 5%;
-    max-width: 50%;
+    max-width: 46%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -33,6 +33,10 @@ nav{
     gap: 30px;
 }
 
+.nav__list .icon{
+    display: none;
+}
+
 .nav__list__item{
     padding: 0px;
     text-decoration: none;
@@ -42,6 +46,12 @@ nav{
 
 .nav__list__item:hover{
     color: rgb(255, 142, 22);
+}
+
+.navigation-hamburger{
+    display: none;
+    cursor: pointer;
+    width: 40px;
 }
 
 h1{
@@ -113,12 +123,56 @@ p{
         margin: auto;
     }
 
+    .navigation-hamburger{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
-    header{
-        visibility: hidden;
+
+    .navigation{
+        flex-wrap: wrap;
     }
+
+    .navigation-hamburger{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 25px;
+        cursor: pointer;
+        color: rgb(255, 142, 22);
+    }
+
+
+    .nav__list{
+        display: none;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        background-color: rgb(255, 142, 22);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .nav__list.active{
+        display: flex;
+    }
+
+
+    .nav__list__item{
+        text-align: center;
+        font-size: 20px;
+        color: #ffffff;
+        padding: 2%;
+    }
+  
+    .nav__list__item:hover{
+        color: rgb(182, 64, 0);
+    }
+
 
     .intro__title{
         font-size: 36px;
@@ -126,7 +180,6 @@ p{
 
     .intro__text{
         font-size: 12px;
-
     }
 
     .soup{
@@ -134,4 +187,4 @@ p{
         min-width: 200px;
     }
 
-}    
+}
