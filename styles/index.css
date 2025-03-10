@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     font-family: "Poppins", sans-serif;
     margin: auto;
 }
@@ -11,16 +11,20 @@ main{
 
 header{
     margin: 5%;
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}   
+
+nav{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    max-width: 500px;
-}   
-
-.nav{
-    display: flex;
-    flex-direction: row;
+    padding-right: 10%;
 }
 
 .nav__list{
@@ -29,9 +33,15 @@ header{
     gap: 30px;
 }
 
-li{
-    list-style: none;
-    padding: 0px
+.nav__list__item{
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.nav__list__item:hover{
+    color: rgb(255, 142, 22);
 }
 
 h1{
@@ -50,7 +60,7 @@ p{
 }
 
 .intro__container{
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .intro__text{
@@ -66,12 +76,12 @@ p{
     max-width: 500px;
     height: auto;
     margin-left: 5%;
-    margin-top: -80px;
+    margin-top: -90px;
     padding-left: 10px;
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     header{
         max-width: 100%;
         min-width: 80%;
@@ -105,7 +115,7 @@ p{
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     header{
         visibility: hidden;
     }
